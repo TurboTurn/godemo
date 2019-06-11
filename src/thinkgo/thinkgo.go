@@ -28,7 +28,7 @@ func main() {
 	})*/
 	app.RegisterRoute(routeFun)
 	// listen and serve on 0.0.0.0:9011
-	app.Run("127.0.0.1:8080")
+	app.Run("127.0.0.1:8081")
 }
 
 /* 将写在参数的函数独立出来*/

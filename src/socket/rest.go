@@ -33,5 +33,8 @@ func main() {
 	mux.Del("/user/:uid", deleteuser)
 	mux.Put("/user/:uid", adduser)
 	http.Handle("/", mux)
-	http.ListenAndServe(":8088", nil)
+	addr := ":8080"
+	fmt.Printf("服务器开启在%s端口\n", addr)
+	http.ListenAndServe(addr, nil)
+
 }

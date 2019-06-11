@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"os"
 	"reflect"
 )
 
@@ -79,9 +78,6 @@ func main() {
 	mux.Add("/", &DefaultController{})
 	mux.Add("/user", &UserController{})
 
-	err := http.ListenAndServe(":9527", mux)
-	if err != nil {
-		_, err := fmt.Fprintln(os.Stderr, "发生错误！")
-		fmt.Println(err)
-	}
+	http.ListenAndServe(":9527", mux)
+
 }
