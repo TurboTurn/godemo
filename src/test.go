@@ -49,14 +49,23 @@ func main() {
 	var i byte = 'd'
 	fmt.Println(i)
 
-	var(s1  = 5
-		s2 float32 )
-	fmt.Println(s1,s2)
+	var (
+		s1 = 5
+		s2 float32
+	)
+	fmt.Println(s1, s2)
 
-	const(
+	const (
 		x = iota
 		y = iota
 		z = iota
 	)
-	fmt.Println(x,y,z)
+	fmt.Println(x, y, z)
+}
+func getName() (firstName, middleName, lastName, nickName string) {
+	firstName = "May"
+	middleName = "M"
+	lastName = "Chen"
+	nickName = "Babe"
+	return
 }
