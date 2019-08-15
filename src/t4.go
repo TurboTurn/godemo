@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	fmt.Println("good")
-	r1 := Rectangle{3,5}
+	r1 := Rectangle{3, 5}
 	fmt.Println(r1.area())
 
 	var a interface{} = "hello"

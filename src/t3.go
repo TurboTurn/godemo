@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	/*var P person
 	P.name = "Astaxie"
 	P.age = 25
@@ -16,19 +16,19 @@ func main()  {
 	/*P := person{age:28, name:"yishuang"}
 	fmt.Println(P)*/
 
-	stu := student{human{"ys",23,63},human2{4},""}
+	stu := student{human{"ys", 23, 63}, human2{4}, ""}
 	stu.human.age = 22
 	fmt.Println(stu)
 }
 
 type person struct {
 	name string
-	age int
+	age  int
 }
 
 type human struct {
-	name string
-	age int
+	name   string
+	age    int
 	weight int
 }
 type human2 struct {
@@ -41,9 +41,6 @@ type student struct {
 	speciality string
 }
 
-func (s student)String() string  {//调用fmt.print会输出此处
+func (s student) String() string { //调用fmt.print会输出此处
 	return "rr✆"
 }
-
-
-

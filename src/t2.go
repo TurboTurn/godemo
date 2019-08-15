@@ -30,12 +30,12 @@ func main() {
 	numbers["two"] = 2
 	numbers["three"] = 3
 	fmt.Println(numbers)
-	for k, v := range numbers{
+	for k, v := range numbers {
 		//由于 Go 支持 “多值返回”, 而对于“声明而未被调用”的变量, 编译器会报错, 在这种情况下, 可以使用_来丢弃
 		//不需要的返回值
-		fmt.Println(k,v)
+		fmt.Println(k, v)
 	}
-	for _, v := range numbers{
+	for _, v := range numbers {
 		fmt.Println(v)
 	}
 
@@ -46,7 +46,7 @@ func main() {
 	} else {
 		fmt.Println("no csharp")
 	}
-	delete(rating,"C")
+	delete(rating, "C")
 
 	//myFunc()
 
@@ -54,7 +54,7 @@ func main() {
 	Go里面switch默认相当于每个case最后带有break，匹
 	配成功后不会自动向下执行其他case，而是跳出整个switch, 但是可以使用fallthrough强制执行后面的case代
 	码。
-	 */
+	*/
 	integer := 6
 	switch integer {
 	case 4:
@@ -70,18 +70,18 @@ func main() {
 	default:
 		fmt.Println("default case")
 	}
-	fmt.Println(max(5,8))
-	fmt.Println(max(8,5))
+	fmt.Println(max(5, 8))
+	fmt.Println(max(8, 5))
 
-	args(2,4,6)
+	args(2, 4, 6)
 
-	for i := 0;i < 5; i++{
+	for i := 0; i < 5; i++ {
 		defer fmt.Println(i)
 	}
 }
 
 //goto语句，用goto跳转到必须在当前函数内定义的标签
-func myFunc()  {
+func myFunc() {
 	i := 0
 Here:
 	fmt.Println(i)
@@ -93,17 +93,17 @@ Here:
 
 }
 
-func max(a,b int) (max int,min int) {
-	if a > b{
-		max,min = a,b
-	}else{
-		max,min = b,a
+func max(a, b int) (max int, min int) {
+	if a > b {
+		max, min = a, b
+	} else {
+		max, min = b, a
 	}
 	return
 }
 
-func args(arg ...int)  {
-	for i,j := range arg{
-		fmt.Println("args",i,j)
+func args(arg ...int) {
+	for i, j := range arg {
+		fmt.Println("args", i, j)
 	}
 }
